@@ -1,0 +1,33 @@
+id: websocket_server
+name: WebSocket Server
+description: A reusable protocol-neutral WebSocket server for Arduino App Lab applications.
+category: communication
+supported_boards:
+  - ventunoq
+  - unoq
+ports:
+  - 8765
+variables:
+  - name: WEBSOCKET_SERVER_HOST
+    description: IPv4 address used by the listener inside the App container.
+    default_value: "0.0.0.0"
+    hidden: true
+  - name: WEBSOCKET_SERVER_PORT
+    description: TCP port used by the WebSocket server.
+    default_value: "8765"
+    hidden: true
+  - name: WEBSOCKET_SERVER_PATH
+    description: Exact WebSocket request path accepted by the server.
+    default_value: "/ws"
+  - name: WEBSOCKET_SERVER_MAX_MESSAGE_BYTES
+    description: Maximum UTF-8 text or binary message size in bytes.
+    default_value: "16384"
+  - name: WEBSOCKET_SERVER_MAX_CLIENTS
+    description: Maximum number of clients connected at the same time.
+    default_value: "4"
+  - name: WEBSOCKET_SERVER_PING_INTERVAL_S
+    description: Interval in seconds for WebSocket protocol ping frames.
+    default_value: "10"
+  - name: WEBSOCKET_SERVER_PING_TIMEOUT_S
+    description: Timeout in seconds for WebSocket protocol pong frames.
+    default_value: "10"
